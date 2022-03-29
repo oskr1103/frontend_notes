@@ -25,6 +25,9 @@
   .card__show {
     width: 80%;
   }
+  .grid-card {
+    top: 40%;
+  }
 }
 
 .btn-card {

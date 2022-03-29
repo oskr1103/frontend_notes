@@ -17,6 +17,16 @@
   top: 30%;
 }
 
+@media (max-width: 600px) {
+  .card__show {
+    width: 80%;
+  }
+  .create {
+    top: 40%;
+    width: 80%;
+  }
+}
+
 .btn-notes {
   background: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   color: #fff;
