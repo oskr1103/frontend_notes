@@ -1,10 +1,11 @@
 import "./App.css";
 
-import CompShowBlogs from "./blog/ShowBlogs";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CompCreateBlog from "./blog/CreateBlog";
-import CompEditBlog from "./blog/EditBlog";
-import Headernotes from "./blog/Headernotes";
+
+import CompShowBlogs from "./components/showblogs/ShowBlogs";
+import CompCreateBlog from "./components/createblogs/CreateBlog";
+import CompEditBlog from "./components/editblogs/EditBlog";
+import Headernotes from "./components/header/Headernotes";
 
 function App() {
   return (

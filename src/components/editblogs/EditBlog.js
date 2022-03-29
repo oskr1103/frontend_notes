@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import "./CreateBlog.css";
+import "../createblogs/CreateBlog.css";
 
 const URI = "https://rehobot-notes.herokuapp.com/blogs/";
 
