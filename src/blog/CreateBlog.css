@@ -1,0 +1,31 @@
+.container__create {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.create {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: hsl(235, 24%, 19%);
+  margin-bottom: 10px;
+  box-shadow: 5px 20px 35px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 30px;
+  position: absolute;
+  top: 30%;
+}
+
+.btn-notes {
+  background: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  color: #fff;
+  border: none;
+  width: 70px;
+  height: 30px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}

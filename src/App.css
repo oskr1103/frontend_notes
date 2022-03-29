@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: hsl(235, 21%, 11%);
 }
 
 .App-logo {
@@ -20,12 +21,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-.grid-card {
-  display: grid;
-  grid-gap: 15px;
-  padding: 15 px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  width: 90%;
 }

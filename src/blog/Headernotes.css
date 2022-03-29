@@ -1,0 +1,43 @@
+.containerHeader {
+  width: 100%;
+  height: 400px;
+  background-image: url(../assets/img/bg-desktop-dark.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.containerHeader__header {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.containerHeader__header img {
+  width: 200px;
+}
+.btn__createNotes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  text-decoration: none;
+}
+
+.btn__createNotes i {
+  font-size: 30px;
+  color: #611a84;
+}

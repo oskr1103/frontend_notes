@@ -2,7 +2,9 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const URI = "http://localhost:8000/blogs/";
+import "./CreateBlog.css";
+
+const URI = "https://rehobot-notes.herokuapp.com/blogs/";
 
 const CompEditBlog = () => {
   const [title, setTitle] = useState("");
@@ -32,31 +34,33 @@ const CompEditBlog = () => {
   };
 
   return (
-    <div className="container">
-      <h3>Editar Nota</h3>
-      <form onSubmit={update}>
-        <div className="mb-3">
-          <label className="form-label">Título</label>
-          <input
-            type="text"
-            onChange={(e) => setTitle(e.target.value)}
-            className="form-control"
-            value={title}
-          />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Contenido</label>
-          <textarea
-            type="text"
-            onChange={(e) => setContent(e.target.value)}
-            className="form-control"
-            value={content}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Guardar
-        </button>
-      </form>
+    <div className="container__create">
+      <div className="create">
+        <h3>Editar Nota</h3>
+        <form onSubmit={update}>
+          <div className="mb-3">
+            <label className="form-label">Título</label>
+            <input
+              type="text"
+              onChange={(e) => setTitle(e.target.value)}
+              className="form-control"
+              value={title}
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Contenido</label>
+            <textarea
+              type="text"
+              onChange={(e) => setContent(e.target.value)}
+              className="form-control"
+              value={content}
+            />
+          </div>
+          <button type="submit" className="btn-notes">
+            Guardar
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

@@ -2,7 +2,9 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const URI = "http://localhost:8000/blogs/";
+import "./ShowBlogs.css";
+
+const URI = "https://rehobot-notes.herokuapp.com/blogs/";
 
 const CompShowBlogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -13,7 +15,10 @@ const CompShowBlogs = () => {
   //Procedimiento para obtener los blogs
   const getBlogs = async () => {
     const result = await axios.get(URI);
-    setBlogs(result.data);
+    setBlogs(result.data.sort((a, b) => b.id - a.id));
+    console.log(
+      "App desarrollada con NodeJS, Express, ReactJS y MongoDB - Isai Colina"
+    );
   };
 
   //Procedimiento para eliminar un blog
@@ -23,27 +28,22 @@ const CompShowBlogs = () => {
   };
 
   return (
-    <div className="container">
-      <Link to="/create" className="btn btn-primary my-2">
-        <i className="fa-solid fa-plus"></i> Crear Nota
-      </Link>
-
+    <div className="container__show">
       <div className="grid-card">
-        {blogs.map((blog) => (
-          <div className="card">
+        {blogs.map((blog, index) => (
+          <div className="card__show" key={index}>
             <div className="card-header">
               <b>{blog.title}</b>
             </div>
             <div className="card-body">
-              {/* <h5 className="card-title">Special title treatment</h5> */}
               <p className="card-text">{blog.content}</p>
               <div className="btn-card">
-                <Link to={`/edit/${blog.id}`} className="btn btn-info">
+                <Link to={`/edit/${blog._id}`} className="btn-notesShow">
                   <i className="fa-solid fa-pen-to-square"></i>
                 </Link>
                 <button
-                  onClick={() => deleteBlog(blog.id)}
-                  className="btn btn-danger"
+                  onClick={() => deleteBlog(blog._id)}
+                  className="btn-notesShow"
                 >
                   <i className="fa-solid fa-trash-can"></i>
                 </button>

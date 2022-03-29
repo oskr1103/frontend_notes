@@ -2,7 +2,9 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const URI = "http://localhost:8000/blogs/";
+import "./CreateBlog.css";
+
+const URI = "https://rehobot-notes.herokuapp.com/blogs/";
 
 const CompCreateBlog = () => {
   const [title, setTitle] = useState("");
@@ -20,31 +22,33 @@ const CompCreateBlog = () => {
   };
 
   return (
-    <div className="container">
-      <h3>Crear Nota</h3>
-      <form onSubmit={store}>
-        <div className="mb-3">
-          <label className="form-label">Título</label>
-          <input
-            type="text"
-            onChange={(e) => setTitle(e.target.value)}
-            className="form-control"
-            value={title}
-          />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Contenido</label>
-          <textarea
-            type="text"
-            onChange={(e) => setContent(e.target.value)}
-            className="form-control"
-            value={content}
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Crear
-        </button>
-      </form>
+    <div className="container__create">
+      <div className="create">
+        <h3>Crear Nota</h3>
+        <form onSubmit={store}>
+          <div className="mb-3">
+            <label className="form-label">Título</label>
+            <input
+              type="text"
+              onChange={(e) => setTitle(e.target.value)}
+              className="form-control"
+              value={title}
+            />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Contenido</label>
+            <textarea
+              type="text"
+              onChange={(e) => setContent(e.target.value)}
+              className="form-control"
+              value={content}
+            />
+          </div>
+          <button type="submit" className="btn-notes">
+            Crear
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
