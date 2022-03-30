@@ -6,6 +6,7 @@ import CompShowBlogs from "./components/showblogs/ShowBlogs";
 import CompCreateBlog from "./components/createblogs/CreateBlog";
 import CompEditBlog from "./components/editblogs/EditBlog";
 import Headernotes from "./components/header/Headernotes";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/edit/:id" element={<CompEditBlog />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
