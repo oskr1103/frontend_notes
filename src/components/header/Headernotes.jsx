@@ -6,9 +6,11 @@ import "./Headernotes.css";
 
 const Headernotes = () => {
   return (
-    <div className="containerHeader">
+    <div className="containerHeader bg__header">
       <div className="containerHeader__header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Link to="/">
+          <img src={logo} className="App-logo" alt="logo" />
+        </Link>
         <Link to="/create" className="btn__createNotes">
           <i className="fa-solid fa-plus"></i>
         </Link>
